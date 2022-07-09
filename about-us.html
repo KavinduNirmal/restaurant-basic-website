@@ -91,12 +91,21 @@
         padding: 20px;
         border-radius: 10px;
         height: 100%;
+        overflow: scroll;
       }
-      .title {
-        font-size: 3em;
+
+      #grid-B::-webkit-scrollbar {
+        display: none;
+      }
+
+      .about-us h1 {
         color: #fff;
-        font-weight: bold;
-        padding-bottom: 30px;
+        padding: 20px 25px 35px 25px;
+      }
+
+      .about-us p {
+        color: #fff;
+        padding: 10px 25px 10px 25px;
       }
 
       .order-btn {
@@ -106,6 +115,11 @@
         color: #298626;
         font-weight: 600;
         cursor: pointer;
+        display: flex;
+      }
+
+      .order-btn span:nth-child(2) {
+        padding: 0 10px;
       }
 
       .order-btn:hover {
@@ -113,8 +127,20 @@
         color: #fff;
         background-color: #298626;
       }
+
+      .button {
+        position: absolute;
+        top: 90%;
+        right: 40px;
+        z-index: 99;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+      }
     </style>
-    <title>Foodies - Home</title>
+    <title>Foodies - About Us</title>
   </head>
   <body>
     <header class="nav-links">
@@ -127,15 +153,60 @@
     </header>
     <div class="grid">
       <div id="grid-B">
-        <p class="title">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, in!
-        </p>
-        <button class="order-btn">Order Now</button>
+        <div class="about-us">
+          <h1>Who are We</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ea
+            dolores. Soluta eveniet a et quibusdam at obcaecati mollitia minima
+            ullam animi? Necessitatibus accusamus voluptatem atque voluptatum
+            officiis aliquam possimus.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            nostrum veniam quia quae temporibus, corporis praesentium molestias,
+            quasi dolor tenetur, itaque commodi hic enim nobis cumque optio
+            fugiat beatae aliquam.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            nostrum veniam quia quae temporibus, corporis praesentium molestias,
+            quasi dolor tenetur, itaque commodi hic enim nobis cumque optio
+            fugiat beatae aliquam.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            nostrum veniam quia quae temporibus, corporis praesentium molestias,
+            quasi dolor tenetur, itaque commodi hic enim nobis cumque optio
+            fugiat beatae aliquam.
+          </p>
+        </div>
       </div>
+    </div>
+    <div class="button">
+      <button class="order-btn">
+        <span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-phone"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+            ></path></svg
+        ></span>
+        <span>Contact us</span>
+      </button>
     </div>
     <div class="hero-image">
       <img
-        src="./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        src="./images/daniel-lee-kV4-vFoamV4-unsplash.jpg"
         alt="Background Image"
       />
     </div>

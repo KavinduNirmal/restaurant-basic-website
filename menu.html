@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -18,12 +18,24 @@
         font-family: "Inter", sans-serif;
       }
 
+      body::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      body::-webkit-scrollbar-track {
+        background-color: rgb(216, 216, 216);
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: #298626;
+      }
+
       .nav-links {
-        position: absolute;
-        top: 0;
+        /* position: absolute;
+        top: 0; */
         width: 100%;
         padding: 25px;
-        background-color: #fff;
+        background-color: rgb(240, 240, 240);
         z-index: 3;
       }
 
@@ -50,40 +62,99 @@
         color: #298626;
       }
 
-      .hero-image img {
-        height: 100vh;
+      #hero-image {
+        height: 100%;
         width: 100%;
         object-fit: cover;
-        filter: brightness(50%);
+        /* filter: brightness(50%); */
       }
 
-      .grid {
+      #grid {
         display: grid;
-        grid-template-columns: 60px 2fr 2fr 60px;
-        z-index: 1;
-        position: absolute;
-        top: 20%;
-        height: 70vh;
+        grid-template-columns: 60px 3fr 3fr 60px;
+        position: relative;
+        /* top: 50px; */
+        height: 100vh;
+        grid-gap: 10px;
       }
 
-      #grid-B {
-        /* background-color: rgb(255, 255, 255); */
-        grid-column: 2/2;
+      #grid-a {
+        grid-column: 1;
+        background-color: #298626;
+      }
+
+      #grid-b {
+        grid-column: 2;
+        padding: 70px 40px;
+        /* background-color: aqua; */
+      }
+
+      .menu-dish-name {
+        padding: 20px 0 30px 0;
+        font-size: 2em;
+        font-weight: 900;
+      }
+
+      .menu-description {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5em;
+        padding-bottom: 35px;
+      }
+
+      .menu-info {
+        padding-top: 10px;
         align-items: center;
         align-self: center;
-        justify-content: left;
-        padding: 20px;
-        border-radius: 10px;
-        height: 100%;
-      }
-      .title {
-        font-size: 1.2em;
-        color: #fff;
-        font-weight: bold;
-        padding-bottom: 30px;
+        align-content: center;
       }
 
-      .order-btn {
+      .menu-info :nth-child(1) {
+        padding-right: 5px;
+      }
+
+      .menu-btns {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+      }
+
+      .menu-order-btn-secondary,
+      .menu-order-btn-primary {
+        width: 80%;
+        padding: 10px 25px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .menu-order-btn-secondary {
+        color: #181818;
+        background-color: #fff;
+        border: 1px solid #181818;
+      }
+
+      .menu-order-btn-secondary:hover {
+        color: #fff;
+        background-color: #181818;
+      }
+
+      .menu-order-btn-primary {
+        color: #fff;
+        border: 1px solid #298626;
+        background-color: #298626;
+      }
+
+      .menu-order-btn-primary:hover {
+        color: #298626;
+        border: 1px solid #298626;
+        background-color: #fff;
+      }
+
+      /* .order-btn {
         padding: 10px 20px;
         border: 1px solid #298626;
         border-radius: 5px;
@@ -96,37 +167,164 @@
         border: 1px solid #fff;
         color: #fff;
         background-color: #298626;
+      } */
+
+      #grid-c {
+        grid-column: 3;
+        /* background-color: yellow; */
+      }
+
+      #grid-d {
+        grid-column: 4;
+      }
+
+      #grid-f {
+        padding: 70px 40px;
+      }
+
+      .menu-nav {
+        display: flex;
+        margin-bottom: 35px;
+      }
+
+      .menu-nav .nav-links {
+        background-color: white;
+      }
+
+      .menu-nav p {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #298626;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        align-self: center;
+        padding: 20px;
+      }
+
+      .menu-nav input {
+        padding: 6px;
+        margin: 20px;
+        font-family: "inter", sans-serif;
+      }
+
+      .menu-nav li {
+        font-weight: 500;
       }
     </style>
-    <title>Menu</title>
+    <title>Foodies - Menu</title>
   </head>
   <body>
     <header class="nav-links">
       <ul>
-        <li class="nav-link"><a href="#">Home</a></li>
+        <li class="nav-link"><a href="./index.html">Home</a></li>
         <li class="nav-link"><a href="./menu.html">Menu</a></li>
-        <li class="nav-link"><a href="#">About Us</a></li>
-        <li class="nav-link"><a href="#">Contact</a></li>
+        <li class="nav-link"><a href="./about-us.html">About Us</a></li>
+        <li class="nav-link"><a href="./contact-us.html">Contact</a></li>
       </ul>
     </header>
-    <div class="grid">
-      <div id="grid-B">
-        <div class="menu-item">
-          <p class="title">Lorem, ipsum dolor.</p>
-          <p class="price">$100</p>
-          <p class="discription">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Repellendus, quo.
-          </p>
-          <button class="order-btn">Order Now</button>
-        </div>
+    <div class="menu-nav">
+      <p>Menu</p>
+      <input type="text" placeholder="Search.." />
+      <div class="nav-links">
+        <ul>
+          <li class="nav-link"><a href="#">Appetizers</a></li>
+          <li class="nav-link"><a href="#">Entrées</a></li>
+          <li class="nav-link"><a href="#">Side Dishes</a></li>
+          <li class="nav-link"><a href="#">Salads</a></li>
+          <li class="nav-link"><a href="#">Desserts</a></li>
+          <li class="nav-link"><a href="#">Cocktails</a></li>
+          <li class="nav-link"><a href="#">Drinks</a></li>
+        </ul>
       </div>
     </div>
-    <div class="hero-image">
-      <img
-        src="./louis-hansel-8FWQQXMspEM-unsplash.jpg"
-        alt="Background Image"
-      />
+    <div id="grid">
+      <div id="grid-a"></div>
+      <div id="grid-b">
+        <div class="menu-reviews">
+          <p class="menu-stars">
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#x2606;</span>
+            <span>&#x2606;</span>
+          </p>
+          <p class="menu-dish-name">Japanese Sushi</p>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+            necessitatibus quas omnis deleniti molestias non aliquam ea ullam
+            repudiandae culpa architecto laborum, soluta voluptate earum?
+          </p>
+          <p class="menu-info">
+            <span><img src="./images/info.svg" alt="" /></span>
+            <span>4 Servings</span>
+          </p>
+          <p class="menu-info">
+            <span><img src="./images/dollar-sign.svg" alt="" /></span>
+            <span>$20-$40</span>
+          </p>
+          <p class="menu-info">
+            <span><img src="./images/phone.svg" alt="phone" /></span>
+            <span>+94 79 123 4567</span>
+          </p>
+          <div class="menu-btns">
+            <button class="menu-order-btn-secondary">Make a reservation</button>
+            <button class="menu-order-btn-primary">Order for delivery</button>
+          </div>
+        </div>
+      </div>
+      <div id="grid-c">
+        <img
+          src="./images/louis-hansel-8FWQQXMspEM-unsplash.jpg"
+          alt="Food"
+          id="hero-image"
+        />
+      </div>
+      <div id="grid-d"></div>
+    </div>
+    <div id="grid" style="margin-top: 20px">
+      <div id="grid-e" style="background-color: red"></div>
+      <div id="grid-g">
+        <img
+          src="./images/louis-hansel-8FWQQXMspEM-unsplash.jpg"
+          alt="Food"
+          id="hero-image"
+        />
+      </div>
+      <div id="grid-f">
+        <div class="menu-reviews">
+          <p class="menu-stars">
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#9733;</span>
+            <span>&#x2606;</span>
+            <span>&#x2606;</span>
+          </p>
+          <p class="menu-dish-name">Japanese Sushi</p>
+          <p class="menu-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+            necessitatibus quas omnis deleniti molestias non aliquam ea ullam
+            repudiandae culpa architecto laborum, soluta voluptate earum?
+          </p>
+          <p class="menu-info">
+            <span><img src="./images/info.svg" alt="" /></span>
+            <span>4 Servings</span>
+          </p>
+          <p class="menu-info">
+            <span><img src="./images/dollar-sign.svg" alt="" /></span>
+            <span>$20-$40</span>
+          </p>
+          <p class="menu-info">
+            <span><img src="./images/phone.svg" alt="phone" /></span>
+            <span>+94 79 123 4567</span>
+          </p>
+          <div class="menu-btns">
+            <button class="menu-order-btn-secondary">Make a reservation</button>
+            <button class="menu-order-btn-primary">Order for delivery</button>
+          </div>
+        </div>
+      </div>
+      <div id="grid-h"></div>
     </div>
   </body>
 </html>
